@@ -20,6 +20,11 @@ class GenealogyController extends controller
 		}*/
 
 
+
+		$this->settings = SiteSettings::site_settings();
+
+		
+
 	}
 
 

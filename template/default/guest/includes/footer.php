@@ -30,6 +30,11 @@
     <script src="<?=$asset;?>/vendors/js/vendors.min.js"></script>
     <!-- BEGIN Vendor JS-->
 
+
+
+    <script src="<?=asset;?>/vendors/js/extensions/jquery.steps.min.js"></script>
+    <script src="<?=asset;?>/js/scripts/forms/wizard-steps.min.js"></script>
+
     <!-- BEGIN: Page Vendor JS-->
     <script src="<?=$asset;?>/vendors/js/ui/jquery.sticky.js"></script>
     <script src="<?=$asset;?>/vendors/js/charts/jquery.sparkline.min.js"></script>

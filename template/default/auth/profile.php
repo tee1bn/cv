@@ -109,19 +109,21 @@ $page_title = "Profile";
                                             </div>
 
                                         
-
-
-                                            <div class="form-group">
-                                                <label for="phone" class="pull-left">Phone<sup>*</sup></label>
-                                                <div class="input-group bootstrap-touchspin bootstrap-touchspin-injected">
-                                                    <span class="input-group-btn input-group-prepend"></span>
-                                                    <input id="tch3" name="phone"   value="<?=$auth->phone;?>"
-                                                      data-bts-button-down-class="btn btn-secondary btn-outline" data-bts-button-up-class="btn btn-secondary btn-outline" class="form-control">
-                                                    <span class="input-group-btn input-group-append">
-                                                        <button class="btn btn-secondary btn-outline bootstrap-touchspin-up" type="button">Require Verification</button>
-                                                    </span>
-                                                </div> 
-                                            </div>                                        
+                                        <div class="form-group">
+                                            <label for="phone" class="pull-left">Phone<sup>*</sup></label>
+                                            <div class="input-group bootstrap-touchspin bootstrap-touchspin-injected">
+                                                <span class="input-group-btn input-group-prepend"></span>
+                                                <span class="input-group-btn input-group-append">
+                                                    <button class="btn btn-secondary btn-outline bootstrap-touchspin-up" type="button">+855</button>
+                                                </span>
+                                                <input id="tch3" minlength="10" maxlength="10"  placeholder="8123546574 (Leave out +855)" name="phone"   value="<?=$this->auth()->phone;?>"
+                                                  data-bts-button-down-class="btn btn-secondary btn-outline" data-bts-button-up-class="btn btn-secondary btn-outline" class="form-control">
+                                                <span class="input-group-btn input-group-append">
+                                                    <button class="btn btn-secondary btn-outline bootstrap-touchspin-up" type="button">Require Verification</button>
+                                                </span>
+                                            </div> 
+                                        </div>                                        
+                                                              
                                         
                                             
                                            <!--    <div class="form-group">

@@ -202,7 +202,7 @@ return;
 	public function index($page=null)
 	{	
 
-		$this->view('guest/login');
+		$this->view('guest/index');
 		// Redirect::to('login');
 	}
 

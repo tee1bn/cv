@@ -52,8 +52,8 @@
         <div class="navbar-header">
           <ul class="nav navbar-nav flex-row">
             <li class="nav-item mobile-menu d-md-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu font-large-1"></i></a></li>
-            <li class="nav-item"><a class="navbar-brand" href="index-2.html"><img class="brand-logo" alt="stack admin logo" src="<?=$asset;?>/images/logo/stack-logo-light.png">
-                <h2 class="brand-text">Stack</h2></a></li>
+            <li class="nav-item"><a class="navbar-brand" href="<?=domain;?>">
+                <h2 class="brand-text">CV BOXCAPITAL</h2></a></li>
             <li class="nav-item d-md-none"><a class="nav-link open-navbar-container" data-toggle="collapse" data-target="#navbar-mobile"><i class="fa fa-ellipsis-v"></i></a></li>
           </ul>
         </div>
@@ -177,10 +177,10 @@
     <!-- BEGIN: Main Menu-->
     <div class="header-navbar navbar-expand-sm navbar navbar-horizontal navbar-fixed navbar-light navbar-without-dd-arrow navbar-shadow menu-border" role="navigation" data-menu="menu-wrapper">
       <!-- Horizontal menu content-->
-      <div class="navbar-container main-menu-content" data-menu="menu-container">
+      <div class="navbar-container main-menu-content" data-menu="menu-container" style="margin: auto;">
         <!-- include ../../../includes/mixins-->
         <ul class="nav navbar-nav" id="main-menu-navigation" data-menu="menu-navigation">
-          <li class="dropdown nav-item" data-menu="dropdown"><a class="dropdown-toggle nav-link" href="index-2.html" data-toggle="dropdown"><i class="ft-home"></i><span>Dashboard</span></a>
+         <!--  <li class="dropdown nav-item" data-menu="dropdown"><a class="dropdown-toggle nav-link" href="index-2.html" data-toggle="dropdown"><i class="ft-home"></i><span>Home</span></a>
             <ul class="dropdown-menu">
               <li class="active" data-menu=""><a class="dropdown-item" href="dashboard-ecommerce.html" data-toggle="dropdown">eCommerce</a>
               </li>
@@ -189,7 +189,27 @@
               <li data-menu=""><a class="dropdown-item" href="dashboard-fitness.html" data-toggle="dropdown">Fitness</a>
               </li>
             </ul>
+          </li> -->
+
+
+          <li class=" nav-item" data-menu="">
+            <a class="-toggle nav-link" href="#" data-toggle="">
+              <i class="ft-home"></i>
+              <span>Home</span></a>
           </li>
+
+          <li class=" nav-item" data-menu="">
+            <a class="-toggle nav-link" href="#" data-toggle="">
+              <i class="ft-book"></i>
+              <span>About us</span></a>
+          </li>
+          
+          <li class=" nav-item" data-menu="">
+            <a class="-toggle nav-link" href="#" data-toggle="">
+              <i class="ft-shopping-cart"></i>
+              <span>Shop</span></a>
+          </li>
+          
       
         </ul>
       </div>

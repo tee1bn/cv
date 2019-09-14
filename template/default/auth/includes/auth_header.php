@@ -16,7 +16,7 @@
 
           <div class="col-md-7 box-shadow-2 p-0">
                 <div class="card border-grey border-lighten-3 px-2 py-2 m-0">
-                  <div class="card-header border-0">
+                  <div class="card-header border-0" style="padding: 0px;">
                     <div class="card-title text-center">
-                      <img src="http://localhost/cv/template/default/app-assets/images/logo/nsw-t.png" style="height: 110px;" alt="branding logo">
+                      <!-- <img src="<?=$logo;?>" style="height: 110px;" alt="branding logo"> -->
                     </div>

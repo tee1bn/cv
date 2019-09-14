@@ -92,19 +92,19 @@ $page_title = "Settings";
                                   <tr>
                                     <th>SN</th>
                                     <th>Commission</th>
-                                    <th>License (%)</th>
-                                    <th>Packages (%)</th>
-                                    <th>Disagio (%)</th>
+                                    <th>Order (%)</th>
+                                   <!--  <th>Packages (%)</th>
+                                    <th>Disagio (%)</th> -->
                                   </tr>
                                 </thead>
                                 <tbody>
                                   <tr ng-repeat="(key, $commission_setting) in $commission_settings">
                                     <td>{{$index + 1}}</td>
                                     <td>{{$commission_setting.level}}</td>
-                                    <td contenteditable="true" ng-model="$commission_setting.license">{{$commission_setting.license}}</td>
-                                    <td contenteditable="true" ng-model="$commission_setting.packages">{{$commission_setting.packages}}</td>
+                                    <td contenteditable="true" ng-model="$commission_setting.on_order">{{$commission_setting.on_order}}</td>
+<!--                                     <td contenteditable="true" ng-model="$commission_setting.packages">{{$commission_setting.packages}}</td>
                                     <td contenteditable="true" ng-model="$commission_setting.disagio">{{$commission_setting.disagio}}</td>
-                                  </tr>
+ -->                                  </tr>
                                 
                                 </tbody>
                               </table>
@@ -127,7 +127,7 @@ $page_title = "Settings";
 
 
 
-              
+              <!-- 
                  <div class="row" >
                     <div class="col-12">
                         <div class="card">
@@ -181,7 +181,7 @@ $page_title = "Settings";
 
                         </div>
                     </div>
-                </div>
+                </div> -->
 
         </div>
       </div>
