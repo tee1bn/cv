@@ -14,14 +14,13 @@
     <link rel="shortcut icon" type="image/x-icon" href="<?=$logo;?>">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i%7COpen+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
 
-    <!-- BEGIN: Vendor CSS-->
 
-    <link rel="stylesheet" type="text/css" href="<?=asset;?>/vendors/css/tables/datatable/datatables.min.css">    
+    <!-- BEGIN: Vendor CSS-->
     <link rel="stylesheet" type="text/css" href="<?=$asset;?>/vendors/css/vendors.min.css">
-    <link rel="stylesheet" type="text/css" href="<?=$asset;?>/vendors/css/charts/jquery-jvectormap-2.0.3.css">
-    <link rel="stylesheet" type="text/css" href="<?=$asset;?>/vendors/css/charts/morris.css">
     <link rel="stylesheet" type="text/css" href="<?=$asset;?>/vendors/css/extensions/unslider.css">
     <link rel="stylesheet" type="text/css" href="<?=$asset;?>/vendors/css/weather-icons/climacons.min.css">
+    <link rel="stylesheet" type="text/css" href="<?=$asset;?>/fonts/meteocons/style.min.css">
+    <link rel="stylesheet" type="text/css" href="<?=$asset;?>/vendors/css/charts/morris.css">
     <!-- END: Vendor CSS-->
 
     <!-- BEGIN: Theme CSS-->
@@ -32,68 +31,41 @@
     <!-- END: Theme CSS-->
 
     <!-- BEGIN: Page CSS-->
-    <link rel="stylesheet" type="text/css" href="<?=$asset;?>/css/core/menu/menu-types/vertical-menu.min.css">
+    <link rel="stylesheet" type="text/css" href="<?=$asset;?>/css/core/menu/menu-types/horizontal-menu.min.css">
     <link rel="stylesheet" type="text/css" href="<?=$asset;?>/css/core/colors/palette-gradient.min.css">
-    <!-- link(rel='stylesheet', type='text/css', href=app_assets_path+'/css'+rtl+'/pages/users.css')-->
+    <link rel="stylesheet" type="text/css" href="<?=$asset;?>/fonts/simple-line-icons/style.min.css">
+    <link rel="stylesheet" type="text/css" href="<?=$asset;?>/css/core/colors/palette-gradient.min.css">
+    <link rel="stylesheet" type="text/css" href="<?=$asset;?>/css/pages/timeline.min.css">
     <!-- END: Page CSS-->
 
-
-
     <link rel="stylesheet" type="text/css" href="<?=asset;?>/fonts/feather/style.min.css">
-    <script src="<?=asset;?>/js/jquery1.12.min.js"></script>
+
   </head>
   <!-- END: Head-->
 
-
-    <script src="<?=asset;?>/angulars/angularjs.js"></script>
-    <script src="<?=asset;?>/angulars/angular-sanitize.js"></script>
-    <script>
-        let $base_url = "<?=domain;?>";
-        var app = angular.module('app', ['ngSanitize']);
-        
-/*       var console = {};
-        console.log = function(){};
-*/
-    </script>
-
-
-
-
-
-
-
-
   <!-- BEGIN: Body-->
-  <body class="vertical-layout vertical-menu 2-columns   fixed-navbar" data-open="click" data-menu="vertical-menu" data-col="2-columns">
+  <body class="horizontal-layout horizontal-menu 2-columns  " data-open="click" data-menu="horizontal-menu" data-col="2-columns">
 
     <!-- BEGIN: Header-->
-    <nav class="header-navbar navbar-expand-md navbar navbar-with-menu fixed-top navbar-semi-dark navbar-shadow">
+    <nav class="header-navbar navbar-expand-md navbar navbar-with-menu navbar-static-top navbar-dark bg-gradient-x-grey-blue navbar-border navbar-brand-center">
       <div class="navbar-wrapper">
         <div class="navbar-header">
           <ul class="nav navbar-nav flex-row">
             <li class="nav-item mobile-menu d-md-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu font-large-1"></i></a></li>
-            <li class="nav-item"><a class="navbar-brand" href="<?=domain;?>"><img class="brand-logo" alt="" src="<?=$logo;?>" style="height: 32px;">
-                <h2 class="brand-text" style="position: relative;font-size: 18px;bottom: 7px;"><?=project_name;?></h2></a></li>
+            <li class="nav-item"><a class="navbar-brand" href="index-2.html"><img class="brand-logo" alt="stack admin logo" src="<?=$asset;?>/images/logo/stack-logo-light.png">
+                <h2 class="brand-text">Stack</h2></a></li>
             <li class="nav-item d-md-none"><a class="nav-link open-navbar-container" data-toggle="collapse" data-target="#navbar-mobile"><i class="fa fa-ellipsis-v"></i></a></li>
           </ul>
         </div>
         <div class="navbar-container content">
           <div class="collapse navbar-collapse" id="navbar-mobile">
             <ul class="nav navbar-nav mr-auto float-left">
-              <li class="nav-item d-none d-md-block"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu"></i></a></li>
-
-
-
-              <li class="nav-item d-none d-md-block"><a class="nav-link nav-link-expand" href="#"><i class="ficon ft-maximize"></i></a></li>
-            <!--   <li class="nav-item nav-search"><a class="nav-link nav-link-search" href="#"><i class="ficon ft-search"></i></a>
-                <div class="search-input">
-                  <input class="input" type="text" placeholder="Explore <?=project_name;?>...">
-                </div>
-              </li> -->
             </ul>
-            <ul class="nav navbar-nav float-right">
 
-              <!-- <li class="dropdown dropdown-notification nav-item"><a class="nav-link nav-link-label" href="#" data-toggle="dropdown"><i class="ficon ft-bell"></i><span class="badge badge-pill badge-danger badge-up">5</span></a>
+            <ul class="nav navbar-nav float-right">
+            
+
+              <li class="dropdown dropdown-notification nav-item"><a class="nav-link nav-link-label" href="#" data-toggle="dropdown"><i class="ficon ft-shopping-cart"></i><span class="badge badge-pill badge-danger badge-up">5</span></a>
                 <ul class="dropdown-menu dropdown-menu-media dropdown-menu-right">
                   <li class="dropdown-menu-header">
                     <h6 class="dropdown-header m-0"><span class="grey darken-2">Notifications</span><span class="notification-tag badge badge-danger float-right m-0">5 New</span></h6>
@@ -140,6 +112,7 @@
                   <li class="dropdown-menu-footer"><a class="dropdown-item text-muted text-center" href="javascript:void(0)">Read all notifications</a></li>
                 </ul>
               </li>
+              <!-- 
               <li class="dropdown dropdown-notification nav-item"><a class="nav-link nav-link-label" href="#" data-toggle="dropdown"><i class="ficon ft-mail"></i><span class="badge badge-pill badge-warning badge-up">3</span></a>
                 <ul class="dropdown-menu dropdown-menu-media dropdown-menu-right">
                   <li class="dropdown-menu-header">
@@ -183,21 +156,13 @@
               </li> -->
 
 
-              <li class="dropdown dropdown-user nav-item">
-                <a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
-                  <span class="avatar avatar-online"><img src="<?=domain;?>/<?=$auth->profilepic;?>" alt="avatar">
-                    <i></i></span><span class="user-name"><?=$auth->fullname;?></span></a>
+              <li class="dropdown dropdown-user nav-item"><a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
+              <span class=" ft ft-lock" style="position: relative;top: 5px;font-size: 20px;"></span></a>
 
                 <div class="dropdown-menu dropdown-menu-right">
-                  <a class="dropdown-item" href="<?=domain;?>/user/profile">
-                    <i class="ft-user"></i> Profile 
-                  </a>
-                  <a class="dropdown-item" href="<?=domain;?>/user/package"><i class="ft-briefcase"></i> Package</a>
-
-                  <a class="dropdown-item" href="<?=domain;?>/user/company"><i class="fa fa-building-o"></i> Company</a>
-                  <a class="dropdown-item" href="<?=domain;?>/user/accounts"><i class="ft-settings"></i> Account</a>
-                  <div class="dropdown-divider"></div><a class="dropdown-item" href="<?=domain;?>/login/logout">
-                    <i class="ft-power"></i> Logout</a>
+                  <a class="dropdown-item" href="<?=domain;?>/register"><i class=""></i> Sign Up</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="<?=domain;?>/login"><i class=""></i> Sign In</a>
                 </div>
               </li>
             </ul>
@@ -207,19 +172,28 @@
     </nav>
     <!-- END: Header-->
 
-    <style>
+
+
+    <!-- BEGIN: Main Menu-->
+    <div class="header-navbar navbar-expand-sm navbar navbar-horizontal navbar-fixed navbar-light navbar-without-dd-arrow navbar-shadow menu-border" role="navigation" data-menu="menu-wrapper">
+      <!-- Horizontal menu content-->
+      <div class="navbar-container main-menu-content" data-menu="menu-container">
+        <!-- include ../../../includes/mixins-->
+        <ul class="nav navbar-nav" id="main-menu-navigation" data-menu="menu-navigation">
+          <li class="dropdown nav-item" data-menu="dropdown"><a class="dropdown-toggle nav-link" href="index-2.html" data-toggle="dropdown"><i class="ft-home"></i><span>Dashboard</span></a>
+            <ul class="dropdown-menu">
+              <li class="active" data-menu=""><a class="dropdown-item" href="dashboard-ecommerce.html" data-toggle="dropdown">eCommerce</a>
+              </li>
+              <li data-menu=""><a class="dropdown-item" href="dashboard-analytics.html" data-toggle="dropdown">Analytics</a>
+              </li>
+              <li data-menu=""><a class="dropdown-item" href="dashboard-fitness.html" data-toggle="dropdown">Fitness</a>
+              </li>
+            </ul>
+          </li>
       
-    .card-group,.card-header{
+        </ul>
+      </div>
+      <!-- /horizontal menu content-->
+    </div>
+    <!-- END: Main Menu-->
 
-    border: 1px solid #c985294a;
-    }
-    </style>
-
-<script>
-    $(function() {
-        $('#myTable').DataTable();
-    });
-</script>
-
-  <?php include 'sidebar.php';?>
-  

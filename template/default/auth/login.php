@@ -47,12 +47,7 @@ include 'includes/auth_header.php';?>
 					<p class="text-center">Don't have an account ? <a href="<?=domain;?>/register" class="card-link">Register</a></p>
 					<p class="text-center"> <a href="<?=domain;?>/forgot-password" class="card-link"> Forgot Password ?</a></p>
 				</div>
-			</div>
-		</div>
-	</div>
-</section>
-        </div>
-      </div>
-    </div>
+
+
     <!-- END: Content-->
 <?php include 'includes/auth_footer.php';

@@ -119,12 +119,5 @@ include 'includes/auth_header.php';?>
 					</div>
 					<p class="text-center">Already have an account ? <a href="<?=domain;?>/login" class="card-link">Login</a></p>
 				</div>
-			</div>
-		</div>
-	</div>
-</section>
-        </div>
-      </div>
-    </div>
-    <!-- END: Content-->
+			
 <?php include 'includes/auth_footer.php';
