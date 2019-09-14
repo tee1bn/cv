@@ -202,7 +202,8 @@ return;
 	public function index($page=null)
 	{	
 
-		Redirect::to('login');
+		$this->view('emails/welcome');
+		// Redirect::to('login');
 	}
 
 
