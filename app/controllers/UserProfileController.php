@@ -200,6 +200,20 @@ echo "<pre>";
 						'replaceable'=> 'User|'.$this->auth()->id,
 					],
 
+
+			
+			'country' =>[
+					'required'=> true,
+						],
+			
+			'state' =>[
+					'required'=> true,
+						],
+			
+			'city' =>[
+					'required'=> true,
+						],
+
 		'lastname' =>[
 				'required'=> true,
 				'max'=> '32',
@@ -208,8 +222,10 @@ echo "<pre>";
 
 		'phone' =>[
 				'required'=> true,
+				'numeric'=> true,
 				'max'=> '32',
 				'min'=> '2',
+				'replaceable'=> 'User|'.$this->auth()->id,
 					],
 
 		'bank_name' =>[

@@ -5,6 +5,7 @@
         this.$country = ""; 
         this.$state = ""; 
         this.$city = ""; 
+        this.$auth = {}; 
 
 
         this.fetch_cities = function (){
@@ -20,8 +21,13 @@
                  success: function(data) {
 
                     $this.$cities = data.cities;
-                    angular.element($('#registration_form')).scope().fetch_page_content();                         
-                    console.log(data)
+                    if ($this.$auth != {}) {
+                        $this.$city = $this.$auth.city;
+                    }
+
+
+
+                    angular.element($('#registration_form')).scope().$apply();                         
                        
                  },
                  error: function (data) {
@@ -48,8 +54,16 @@
                  success: function(data) {
 
                     $this.$states = data.states;
-                    angular.element($('#registration_form')).scope().fetch_page_content();                         
-                    console.log(data)
+
+
+                    if ($this.$auth != {}) {
+                        $this.$state = $this.$auth.state;
+                        $this.fetch_cities();
+                    }
+
+
+
+                    angular.element($('#registration_form')).scope().$apply();                         
                        
                  },
                  error: function (data) {
@@ -74,10 +88,17 @@
                  cache: false,
                  success: function(data) {
 
+                    $this.$auth = data.auth;
                     $this.$countries = data.countries;
-                    angular.element($('#registration_form')).scope().fetch_page_content();                         
-                    console.log(data.countries)
-                       
+
+                    if ($this.$auth != {}) {
+                        $this.$country = $this.$auth.country;
+                        $this.fetch_states();
+                    }
+
+
+                    angular.element($('#registration_form')).scope().$apply();                         
+                    console.log($this.$auth) ;
                  },
                  error: function (data) {
                  },
@@ -98,20 +119,9 @@
 
             $scope.$world = new World;
 
-            $scope.fetch_page_content = function () {
+           
 
-
-                        $http.get($base_url+'/world/countries')
-                            .then(function(response) {
-                                // $data = response.data;
-
-                                    
-
-                        });
-
-                }
-
-            // $scope.fetch_page_content();
+            // $scope.$apply();
 
 
 

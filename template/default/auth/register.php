@@ -143,7 +143,8 @@ include 'includes/auth_header.php';?>
 									class="form-control form-control-lg" name="city">
 										<option>Select City</option>
 
-										<option ng-repeat="($index, $city) in $world.$cities" value="{{$city.id}}">{{$city.name}}</option>
+										<option  ng-repeat="($index, $city) in $world.$cities" value="{{$city.id}}"
+										>{{$city.name}}</option>
 
 									</select>
 
