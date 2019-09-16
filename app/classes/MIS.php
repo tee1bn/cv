@@ -131,7 +131,7 @@ EOL;
 
 
 	
-	public static function verify_google_captcha()
+	public static function verify_google_captcha($mode=false)
 	{
 		 	$settings = SiteSettings::site_settings();		 	
 			$post_data =  [
@@ -145,7 +145,12 @@ EOL;
 					
 			if(($csrf['success'] != 1) || ($csrf['hostname'] != $_SERVER['HTTP_HOST'])){
 			    Session::putFlash('warning', "Please solve the captcha");
-			    Redirect::back();
+
+			    if ($mode==true) {
+			    	# code...
+			    }else{ 
+			    	Redirect::back();
+			    }
 			}
 
 	}

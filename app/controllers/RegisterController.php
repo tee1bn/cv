@@ -217,12 +217,14 @@ class RegisterController extends controller
 	 */
 	public function register()
 	{
-		echo "<pre>";
 
+ 		header("content-type:application/json");
 
+ 		$status = 0;
+		// echo "<pre>";
 
 		if (Input::exists('user_registration') || true) {
-			print_r(Input::all());
+			// print_r(Input::all());
 			// MIS::verify_google_captcha();
 
 
@@ -242,9 +244,11 @@ class RegisterController extends controller
 							],
 
 				'phone' =>[
-						// 'required'=> true,
+						'required'=> true,
+						'numeric'=> true,
 						'max'=> '32',
 						'min'=> '2',
+						'unique'=> 'User',
 							],
 			
 				/*
@@ -270,7 +274,7 @@ class RegisterController extends controller
 						'required'=> true,
 							],
 				
-				'province' =>[
+				'state' =>[
 						'required'=> true,
 							],
 				
@@ -298,15 +302,14 @@ class RegisterController extends controller
 
 
 
- if($this->validator->passed()  ){
+ 	if($this->validator->passed()  ){
 
 
 		$introduced_by  =  $this->get_referral(Input::get('introduced_by'));
 
-
 		$referred_by = User::where_to_place_new_user_within_team_introduced_by($introduced_by);
 		$placement_sponsor = User::where('mlm_id', $referred_by)->first();
-		$former_downline_id =  (array_values($placement_sponsor->placement_cut_off))[0];
+		$former_downline_id =  (@array_values($placement_sponsor->placement_cut_off))[0];
 
 		$username  					=  $this->generate_username_from_email(Input::get('email'));
 	 	$user_details 				=  Input::all();
@@ -322,9 +325,9 @@ class RegisterController extends controller
 		 $new_user->update(['mlm_id' => $new_user->id]) ;
 
 
-	if ($former_downline_id != '') { //sponsor has an void place position
-			User::replace_any_cutoff_mlm_placement_position($referred_by, $new_user->id);
-	}
+		if ($former_downline_id != '') { //sponsor has an void place position
+				User::replace_any_cutoff_mlm_placement_position($referred_by, $new_user->id);
+		}
 
  	
 
@@ -332,17 +335,22 @@ class RegisterController extends controller
 
  		Session::putFlash('success', "Registration Successful!.");
  		$this->directly_authenticate($new_user->id);
+
+ 		$status = 1;
+ 		echo json_encode(compact('status'));
+ 		return;
  		// $this->send_credential($new_user->id ,Input::get('password') );
 
- 			Redirect::to("login");
-
+ 			// Redirect::to("login");
  		}
+
+
  }else{
 
  	Session::putFlash('danger', Input::inputErrors());
 
-print_r($this->validator->errors());
-
+		// print_r($this->validator->errors());
+		
  }
 
 		
@@ -351,8 +359,9 @@ print_r($this->validator->errors());
 	}
 
  	
+ 		echo json_encode(compact('status'));
  	
-	Redirect::back();
+	// Redirect::back();
 
 }
 

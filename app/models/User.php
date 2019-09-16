@@ -33,6 +33,7 @@ class User extends Eloquent
 				'age',
 				'country',
 				'state',
+				'city',
 				'province',
 				'phone_verification',
 				'bank_name',

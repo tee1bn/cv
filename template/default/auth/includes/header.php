@@ -42,25 +42,8 @@
     <link rel="stylesheet" type="text/css" href="<?=asset;?>/fonts/feather/style.min.css">
     <script src="<?=asset;?>/js/jquery1.12.min.js"></script>
   </head>
-  <!-- END: Head-->
 
-
-    <script src="<?=asset;?>/angulars/angularjs.js"></script>
-    <script src="<?=asset;?>/angulars/angular-sanitize.js"></script>
-    <script>
-        let $base_url = "<?=domain;?>";
-        var app = angular.module('app', ['ngSanitize']);
-        
-/*       var console = {};
-        console.log = function(){};
-*/
-    </script>
-
-
-
-
-
-
+  <?php       require_once "app/others/angularjs_installation.php" ; ?>
 
 
   <!-- BEGIN: Body-->

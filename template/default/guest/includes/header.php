@@ -43,6 +43,10 @@
   </head>
   <!-- END: Head-->
 
+  <?php       require_once "app/others/angularjs_installation.php" ; ?>
+
+
+
   <!-- BEGIN: Body-->
   <body class="horizontal-layout horizontal-menu 2-columns  " data-open="click" data-menu="horizontal-menu" data-col="2-columns">
 

@@ -36,6 +36,8 @@ $router =[
 
 
 
+	#apis
+	'world' => 'api/WorldAPi',
 
 
 	#admin
