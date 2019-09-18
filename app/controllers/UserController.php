@@ -16,7 +16,7 @@ class UserController extends controller
 			$this->middleware('current_user')
 				->mustbe_loggedin()
 				->must_have_verified_email()
-				->must_have_verified_company();
+				// ->must_have_verified_company();
 		}		
 	}
 
