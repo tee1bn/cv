@@ -153,7 +153,7 @@ class RegisterController extends controller
 
 			$subject 	= 'EMAIL VERIFICATION';
 	 		$body 		= $this->buildView('emails/email-verification', [
-																	'name' => $name,
+																	'user' => $user,
 																	'email' => $email,
 																	'email_verification_token' => $user->email_verification,
 																	]);

@@ -1,7 +1,7 @@
 <?php include 'includes/header.php';?>
 
 
-      <span style="text-transform: capitalize; color: #203864"><?=$data['name'];?></span>!
+      <span style="text-transform: capitalize; color: #203864"><?=$user['name'];?></span>!
       </td></tr></tbody></table>
 
 
@@ -22,6 +22,7 @@
 
   </td></tr></tbody></table>
 </td></tr></tbody></table>
+<div style="display: none;">
     
 
 
