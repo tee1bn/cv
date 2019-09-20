@@ -1,7 +1,7 @@
 <?php include 'includes/header.php';?>
 
 
-      <span style="text-transform: capitalize; color: #203864"><?=$user['name'];?></span>!
+      <span style="text-transform: capitalize; color: #203864"><?=$user['fullname'];?></span>!
       </td></tr></tbody></table>
 
 
