@@ -24,7 +24,7 @@ class WorldAPi extends controller
 	{
 
 		// $country = ['cambodia']
-		$countries =  Country::all();
+		$countries =  Country::where('name','cambodia')->get();
 		$auth =  $this->auth();
 
 		echo json_encode(compact('countries','auth'));

@@ -65,6 +65,20 @@ class AdminController extends controller
 
 	}
 
+	public function view_user_profile($user_id= null)
+	{
+		$user = User::find($user_id);
+
+		if ($user == null) {
+			Redirect::back();
+		}
+
+		$this->user_profile($user->id);
+
+		Redirect::to('user/profile')	;
+
+	}
+
 	public function decline_company($company_id= null)
 	{
 		$company = Company::find($company_id);
@@ -90,6 +104,34 @@ class AdminController extends controller
 
 
 		$company->approve();
+
+		Redirect::back();
+
+	}
+
+	public function approve_user_document($user_id= null)
+	{
+		$user = User::find($user_id);
+
+		if ($user == null) {
+			Redirect::back();
+		}
+
+		$user->approve();
+
+		Redirect::back();
+
+	}
+
+	public function decline_user_document($user_id= null)
+	{
+		$user = User::find($user_id);
+
+		if ($user == null) {
+			Redirect::back();
+		}
+
+		$user->decline();
 
 		Redirect::back();
 

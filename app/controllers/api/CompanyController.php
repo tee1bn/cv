@@ -39,8 +39,6 @@ class CompanyController extends controller
 		header("content-type:application/json");
 
 		echo json_encode(compact('response'));
-
-
 	}
 
 

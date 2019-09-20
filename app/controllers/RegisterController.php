@@ -232,17 +232,22 @@ class RegisterController extends controller
 			$this->validator()->check(Input::all() , array(
 
 
-				'firstname' =>[
+				'fullname' =>[
 						'required'=> true,
+						'max'=> '32',
+						'min'=> '2',
+							],
+			/*	'firstname' =>[
+						// 'required'=> true,
 						'max'=> '32',
 						'min'=> '2',
 							],
 				'lastname' =>[
-						'required'=> true,
+						// 'required'=> true,
 						'max'=> '32',
 						'min'=> '2',
 							],
-
+*/
 				'phone' =>[
 						'required'=> true,
 						'numeric'=> true,
@@ -251,14 +256,14 @@ class RegisterController extends controller
 						'unique'=> 'User',
 							],
 			
-				/*
+				
 				'username' => [
 								'required'=> true,
 								'min'=> 3,
 								'one_word'=> true,
 								'no_special_character'=> true,
 								'unique'=> 'User',
-							],*/
+							],
 
 
 				'email' => [
@@ -275,10 +280,6 @@ class RegisterController extends controller
 							],
 				
 				'state' =>[
-						'required'=> true,
-							],
-				
-				'city' =>[
 						'required'=> true,
 							],
 				

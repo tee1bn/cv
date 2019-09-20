@@ -11,7 +11,7 @@ class Input
 	
 
 
-public function inputErrors()
+public static function inputErrors()
 {
 if (Input::errors()) {
 
@@ -57,7 +57,7 @@ return $output;
 
 
 
-public function inputError($field)
+public static function inputError($field)
 {
 
 	$output = '  <span role="alert">';

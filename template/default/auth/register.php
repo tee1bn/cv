@@ -18,33 +18,25 @@ include 'includes/auth_header.php';?>
                 <form data-toggle="validator" data-function="complete_registration"  class="form-horizontal form-simple ajax_form"
                  id="registration_form" action="<?=domain;?>/register/register" method="post">
 
+							<div class="row">
+								
+								<fieldset class="form-group col-md-6 position-relative has-icon-left mb-1">
+									<label>Fullname </label>
+									<input type="" required="" class="form-control form-control-lg" value="<?=@Input::old('fullname');?>" name="fullname" placeholder="Full Name">
+	                        		<span class="text-danger"><?=@$this->inputError('fullname');?></span>
+								
+								</fieldset>
 
-						<!-- 	<fieldset class="form-group position-relative has-icon-left mb-1">
+
+
+							<fieldset class="form-group col-md-6 position-relative has-icon-left mb-1">
+									<label>Username </label>
                        			 <input type="" required="" 
                        			 	class="form-control form-control-lg" 
                        			 	value="<?=@Input::old('username');?>" name="username" placeholder="User Name">
                         			<span class="text-danger"><?=@$this->inputError('username');?></span>
-								<div class="form-control-position">
-								    <i class="ft-user"></i>
-								</div>
-							</fieldset> -->
+							</fieldset>
 
-							<div class="row">
-								
-								<fieldset class="form-group col-md-6 position-relative has-icon-left mb-1">
-									<label>First Name</label>
-									<input type="" required="" class="form-control form-control-lg" value="<?=@Input::old('firstname');?>" name="firstname" placeholder="First Name">
-	                        		<span class="text-danger"><?=@$this->inputError('firstname');?></span>
-								
-								</fieldset>
-
-
-
-								<fieldset class="form-group col-md-6 position-relative has-icon-left mb-1">
-									<label>Last Name</label>
-	                     		   <input type="" required="" class="form-control form-control-lg" value="<?=@Input::old('lastname');?>" name="lastname" placeholder="Last Name">
-	                       			<span class="text-danger"><?=@$this->inputError('lastname');?></span>
-								</fieldset>
 
 							</div>
 
@@ -124,7 +116,7 @@ include 'includes/auth_header.php';?>
 
 							
 								<fieldset class="form-group col-md-6 position-relative has-icon-left mb-1">
-									<label>State</label>
+									<label>Province/State</label>
 									<select required="" 
 									ng-model="$world.$state" ng-change="$world.fetch_cities();"
 									class="form-control form-control-lg" name="state">
@@ -136,7 +128,7 @@ include 'includes/auth_header.php';?>
 	                        		<span class="text-danger"><?=@$this->inputError('state');?></span>
 								</fieldset>
 
-								<fieldset class="form-group col-md-6 position-relative has-icon-left mb-1">
+							<!-- 	<fieldset class="form-group col-md-6 position-relative has-icon-left mb-1">
 									<label>City</label>
 									<select 
 									required="" 
@@ -149,7 +141,7 @@ include 'includes/auth_header.php';?>
 									</select>
 
 	                        		<span class="text-danger"><?=@$this->inputError('city');?></span>
-								</fieldset>
+								</fieldset> -->
 
 							</div>
 

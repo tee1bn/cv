@@ -80,6 +80,10 @@ $page_title = "Users";
                               <span type='span' class='label label-xs label-primary'>View</span>
                             </a>
 
+                            <a class="dropdown-item" target="_blank" href="<?=$user->AdminViewProfileUrl;?>">
+                              <span type='span' class='label label-xs label-primary'>Profile</span>
+                            </a>
+
                               <a  class="dropdown-item"  href="javascript:void;"  onclick="$confirm_dialog = 
                                 new ConfirmationDialog('<?=domain;?>/admin/suspending_user/<?=$user->id;?>')">
                                         <span type='span' class='label label-xs label-primary'>Toggle Ban</span>
